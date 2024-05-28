@@ -89,16 +89,46 @@ const factPara = (n, fact=1) => {
 // -----------------------------------
 
 // Reverse a given Array
-let arr = [1,2,3,4,5]
+let arr = [1,2,3,4,5,7]
 
 const revArr = (i=0) => {
-    if(arr.length < i)return
-    let n = arr.length
+    if(arr.length/2 <= i)return
+    let n = arr.length -1
     temp = arr[n-i]
     arr[n-i] = arr[i]
     arr[i] = temp
+    console.log("arr", arr);
     revArr(i+1)
 }
 
-revArr(arr)
-console.log(arr, "arr");
+// revArr()
+// console.log(arr, "arr");
+
+// -----------------------------------
+
+// Check if the given String is Palindrome or not
+let str = "abaaaba"
+const checkPalidrome = (i, j) => {
+    if(i >= j){
+        return "Palindrome"
+    }else if(str[i] !== str[j]){
+        return "Not Palindrom"
+    }
+    console.log(str[i], str[j]);
+    return checkPalidrome(i+1, j-1)
+}
+
+// console.log(checkPalidrome(i=0, j=str.length -1))
+
+// -----------------------------------
+
+// Print Fibonacci Series up to Nth term
+
+const fib = (n) => {
+    if(n <= 1)return n
+    // console.log(fib(n-1)+fib(n-2));
+    return fib(n-1) + fib(n-2)
+}
+n=6
+
+console.log(fib(n))
