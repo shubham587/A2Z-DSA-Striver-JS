@@ -100,4 +100,38 @@ function Sort(arr, low, mid, high) {
   }
 }
 
-Merge(arr, 0, arr.length - 1);
+// Merge(arr, 0, arr.length - 1);
+
+
+// Quick Sorting
+
+function Partition(arr, low, high){
+  let pivot = arr[low]
+  let i= low
+  let j = high
+  while(i<j){
+    while(arr[i] <= pivot && i <= high-1){
+      i++
+    }
+    while(arr[j] > pivot && j >= low+1){
+      j--
+    }
+    if(i < j){
+      [arr[i], arr[j]] = [arr[j], arr[i]]
+    }
+  }
+  [arr[low], arr[j]] = [arr[j], arr[low]]
+  return j
+}
+
+
+function Quick(arr, low, high){
+  if(low < high){
+    let pIndex = Partition(arr, low, high)
+    Quick(arr, low, pIndex-1)
+    Quick(arr, pIndex +1, high)
+  }
+}
+
+Quick(arr, 0, arr.length-1)
+console.log(arr, "Arr");
