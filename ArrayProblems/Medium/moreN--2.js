@@ -12,7 +12,7 @@ function BFA(arr){
             }
         }
         if(cnt > Math.floor(arr.length/2)){
-            return arr[i]
+            return add
         }
     }
     return -1

@@ -23,17 +23,18 @@ function longSubMap(arr, k){
             let len = i - map.get(rem)
             maxlen = Math.max(maxlen, len)
         }
-
         if(!map.has(sum)){
             map.set(sum, i)
         }
+        console.log(map);
     }
     return maxlen
 }
 
-console.log(longSubMap(arr, 3))
+// console.log(longSubMap(arr, 3))
 
 // Pointer method: optimized can be for only zero and positive
+arr = [1,4,0,0,0,3,2]
 function longSubPointer (arr, k){
     let left = 0
     let right = 0

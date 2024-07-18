@@ -27,4 +27,5 @@ function OPT(arr){
     return hash[6]
 }
 
-console.log(OPT(arr))
+// console.log(OPT(arr))
+
