@@ -30,17 +30,11 @@ function BFA(arr){
 
 function OPT(arr){
     let i=0,n = arr.length; j=0;
-    let maxIndex = -1
+    let maxVal = -1
     let leader = []
-    while(i < n){
-        if(arr[i] > arr[j] && j !== n){
-            j++
-            continue
-        }else if(j == n-1){
-            i++
-            j=i+1
-            continue
-        }else{
+    for(let i=n-1; i>=0; i--){
+        if(arr[i] > maxVal){
+            maxVal = arr[i]
             leader.push(arr[i])
         }
     }
