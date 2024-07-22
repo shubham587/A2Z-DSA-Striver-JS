@@ -29,3 +29,31 @@ function OPT(arr){
 
 // console.log(OPT(arr))
 
+arr = [7,1,5,3,7,4]
+
+function sell(arr){
+    let minValue = arr[0]
+    let maxProfit = -1
+    let profit = 0
+    for(let i=0; i<arr.length; i++){
+        minValue = Math.min(minValue, arr[i])
+        profit = arr[i] - minValue 
+        maxProfit = Math.max(profit, maxProfit)
+    }
+    return maxProfit
+}
+// console.log(sell(arr));
+
+arr = [1,2,3,5]
+
+function miss(arr){
+    let sum = 0
+    let n = 5
+    for(let i=0; i<arr.length; i++){
+        sum += arr[i]
+    }
+    // return sum
+    return( (n * (n+1)) /2) - sum
+}
+console.log(miss(arr));
+
