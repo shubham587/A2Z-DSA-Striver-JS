@@ -10,7 +10,7 @@
 //  Index 1 is the smallest index such that arr[1] >= x.
 
 let arr = [1, 2, 2, 3, 5, 8, 8, 10]
-let k = 5
+let k = 2
 
 function lowerBound(arr, k) {
     let n = arr.length - 1
