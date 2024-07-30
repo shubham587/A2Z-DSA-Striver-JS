@@ -16,7 +16,6 @@ let arr = [3,4,5,6,7,2,3,3,3,3, 3]
 function OPT(arr){
     let ans = 1000
     let low = 0, high = arr.length-1
-    let cnt = 0
     while(low <= high){
         let mid = Math.floor((low + high) / 2)
 
